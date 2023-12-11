@@ -1,0 +1,28 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #87CEEB; /* Color de fondo para el cielo o agua del charco */
+}
+
+.waterfall-container {
+    position: relative;
+    height: 100vh; /* Ajusta el tamaño del contenedor según tus necesidades */
+    background-image: url("ruta/de/tu/imagen-del-chorro.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.waterfall-container::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px; /* Ancho del charco */
+    height: 50px; /* Altura del charco */
+    background-image: url("ruta/de/tu/imagen-del-charco.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
